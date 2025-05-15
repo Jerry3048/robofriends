@@ -9,6 +9,8 @@ function App() {
     robot.name.toLowerCase().includes(searchField.toLowerCase())
   ); 
  
+
+  
   return (
     <div>
       <SearchBar onSearchChange={setSearchField}/>

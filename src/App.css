@@ -1,1 +1,10 @@
 @import "tailwindcss";
+
+@font-face {
+    font-family: "sega";
+    src: url(sega/SEGA.TTF);
+}
+
+@theme{
+    --font-sega: "sega";
+}

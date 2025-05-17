@@ -24,23 +24,25 @@ function App() {
 
   return (
     <div >
-      <h1 className="lg:text-7xl font-sega text-3xl text-green-600 font-light md:text-5xl text-center p-4">RoboFriends</h1>
-      <SearchBar onSearchChange={setSearchField}/>
+      <div className = "bg-gradient-to-r from-lime-700 to-black fixed top-0 left-0 w-full z-10" >
+        <h1 className="lg:text-7xl font-sega text-3xl text-green-600 font-light md:text-5xl text-center p-4">RoboFriends</h1>
+        <SearchBar onSearchChange={setSearchField}/>
+      </div>
       {loading ? (
        <div className="flex justify-center items-center h-40">
           <div className="animate-spin rounded-full h-16 w-16 border-t-4 border-b-4 border-lime-500"></div>
         </div>
       ) : ( 
-      <div className="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5 p-4">
-        {filteredRobots.map((robot) => (
-          <Card
-            key={robot.id}
-            id={robot.id}
-            name={robot.name}
-            email={robot.email}
-          />
-        ))}
-      </div>
+        <div className="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5 p-4 mt-[200px]">
+          {filteredRobots.map((robot) => (
+            <Card
+              key={robot.id}
+              id={robot.id}
+              name={robot.name}
+              email={robot.email}
+            />
+          ))}
+        </div>
       )}
     </div>
   );

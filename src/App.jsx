@@ -1,3 +1,4 @@
+import ErrorBoundary from "./components/error";
 import { useState, useEffect  } from "react";
 import Card from "./components/card";
 import SearchBar from "./components/searchbar";
@@ -29,10 +30,11 @@ function App() {
         <SearchBar onSearchChange={setSearchField}/>
       </div>
       {loading ? (
-       <div className="flex justify-center items-center h-40">
+       <div className="flex justify-center items-center h-40 mt-100">
           <div className="animate-spin rounded-full h-16 w-16 border-t-4 border-b-4 border-lime-500"></div>
         </div>
-      ) : ( 
+      ) : (
+      <ErrorBoundary>
         <div className="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5 p-4 mt-[200px]">
           {filteredRobots.map((robot) => (
             <Card
@@ -43,6 +45,7 @@ function App() {
             />
           ))}
         </div>
+      </ErrorBoundary>
       )}
     </div>
   );

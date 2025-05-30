@@ -37,7 +37,7 @@ useEffect(() => {
     <div>
       <div className="bg-gradient-to-r from-lime-700 to-black fixed top-0 left-0 w-full z-10">
         <h1 className="lg:text-7xl font-sega text-3xl text-green-600 font-light md:text-5xl text-center p-4">
-          RoboFriends
+          RoboFriends 
         </h1>
         <SearchBar onSearchChange={setSearchField} />
       </div>

@@ -2,7 +2,7 @@
 
 @font-face {
     font-family: "sega";
-    src: url(sega/SEGA.TTF);
+    src: url(./assets/sega/SEGA.TTF);
 }
 
 @theme{
